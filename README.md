@@ -25,7 +25,7 @@ Une des dépendances est [PDFBox](https://mvnrepository.com/artifact/org.apache.
 
 La gestion du vocabulaire se fait dans cette [classe](src/main/java/VocabularyGenerator.java)
 
-Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il y a bien sur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. Ce vocabulaire est disponible [ici](vocabulary.txt) (plus de 2000 mots).
+Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il y a bien sur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. Ce vocabulaire comprends plus de 40000 mots.
 
 Pour pallier ce défaut nous avons créé un fichier texte de substitution plus léger comportant les mots clefs de notre première base de vocabulaire. Ce fichier est complétement modulable et la grammaire peut être plus ou moins riche pour plus ou moins de précision. Ce vocabulaire est disponible [ici](simpleVoc.txt) (78 mots plus raisonnable pour nos machines mais beaucoup moins précis). 
 
