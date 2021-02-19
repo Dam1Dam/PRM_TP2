@@ -23,16 +23,16 @@ Une des dépendances est [PDFBox](https://mvnrepository.com/artifact/org.apache.
 
 - ### Vocabulaire
 
-La gestion du vocabulaire ce fait dans cette [classe](src/main/java/VocabularyGenerator.java)
+La gestion du vocabulaire se fait dans cette [classe](src/main/java/VocabularyGenerator.java)
 
-Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il biensur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. 
+Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il y a bien sur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. 
 
 Pour pallier ce défaut nous avons créé un fichier texte de substitution plus léger comportant les mots clefs de notre première base de vocabulaire. Ce fichier est complétement modulable et la grammaire peut être plus ou moins riche pour plus ou moins de précision.
 
 
 - ### Signatures 
 
-La gestion des signatures ce fait dans cette [classe](src/main/java/SignGenerator.java)
+La gestion des signatures se fait dans cette [classe](src/main/java/SignGenerator.java)
 
 Pour trouver les fichiers identiques et/ou semblables nous nous sommes inspirés de la méthode vectorielle. Notre classe java génère des signatures (par rapport au vocabulaire défini) pour chaque fichier PDF puis les compare pour sortir ceux considérés identiques comme visible dans ce [fichier output](output.txt).
 
