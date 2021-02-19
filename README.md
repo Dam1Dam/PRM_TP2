@@ -25,17 +25,18 @@ Une des dépendances est [PDFBox](https://mvnrepository.com/artifact/org.apache.
 
 La gestion du vocabulaire se fait dans cette [classe](src/main/java/VocabularyGenerator.java)
 
-Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il y a bien sur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. 
+Pour la création de notre vocabulaire notre projet lit tous les mots de chaque fichiers PDF et les stockent dans un fichier txt avec des séparateurs pour pouvoir ensuite les utiliser. Il y a bien sur un système de filtrage permettant d'éviter des doublons de mots ou les mots jugés trop exotiques. Malheureusement cette solution produit un vocabulaire certes très riche mais aussi très lourd et consomme énormément les ressources de l'ordinateur. Ce vocabulaire est disponible [ici](vocabulary.txt) (plus de 2000 mots).
 
-Pour pallier ce défaut nous avons créé un fichier texte de substitution plus léger comportant les mots clefs de notre première base de vocabulaire. Ce fichier est complétement modulable et la grammaire peut être plus ou moins riche pour plus ou moins de précision.
+Pour pallier ce défaut nous avons créé un fichier texte de substitution plus léger comportant les mots clefs de notre première base de vocabulaire. Ce fichier est complétement modulable et la grammaire peut être plus ou moins riche pour plus ou moins de précision. Ce vocabulaire est disponible [ici](simpleVoc.txt) (78 mots plus raisonnable pour nos machines mais beaucoup moins précis). 
 
 
 - ### Signatures 
 
 La gestion des signatures se fait dans cette [classe](src/main/java/SignGenerator.java)
 
-Pour trouver les fichiers identiques et/ou semblables nous nous sommes inspirés de la méthode vectorielle. Notre classe java génère des signatures (par rapport au vocabulaire défini) pour chaque fichier PDF puis les compare pour sortir ceux considérés identiques comme visible dans ce [fichier output](output.txt).
+Pour trouver les fichiers identiques et/ou semblables nous nous sommes inspirés de la méthode vectorielle. Notre classe java génère des signatures (par rapport au vocabulaire défini) pour chaque fichier PDF. Ces signatures sont stockées dans des tableaux d'entiers où chaque entrée représente un mot du vocabulaire. Notre classe compare ensuite ces signatures pour sortir les PDF considérés identiques comme visible dans ce [fichier output](output.txt). 
 
-## Notes
+## Conclusion
 
-Nous nous tenons à votre disposition si vous avez quelconque questions concernant ce projet. 
+La méthode que nous proposons est très rapide et modulable (il s'agit de changer le vocabulaire pour plus ou moins de précision). 
+Nous nous tenons à votre disposition si vous avez quelconque questions concernant cette solution. 
